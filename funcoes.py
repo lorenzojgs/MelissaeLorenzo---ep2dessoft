@@ -38,3 +38,10 @@ def calcula_pontos_regra_simples(dados):
         pontos[i] = dados.count(i) * i
     
     return pontos
+
+
+def calcula_pontos_soma(dados):
+    total = 0
+    for valor in dados:
+        total += valor
+    return total
