@@ -76,16 +76,24 @@ def calcula_pontos_sequencia_alta(dados):
     return 0
 
 # teste
-def calcula_pontos_full_house(dados):
-    valores_unicos = set(dados)
-    
-    if len(valores_unicos) == 2:
-        v1 = list(valores_unicos)[0]
-        contagem = dados.count(v1)
-        
-        if contagem == 2 or contagem == 3:
-            return sum(dados)
-            
-    return 0
+def calcula_pontos_full_house(dados_rolados):
+    dicio_full_house = {}
 
-print(calcula_pontos_full_house([5, 2, 5, 5, 2]))
+    for num in dados_rolados:
+        if num in dicio_full_house:
+            dicio_full_house[num] += 1
+        else:
+            dicio_full_house[num] = 1
+
+    for num in range(1,7):
+        if num not in dados_rolados:
+            dicio_full_house[num] = 0
+
+    valores = list(dicio_full_house.values())
+    soma = 0
+
+    if 2 in valores and 3 in valores:
+        for num, valor in dicio_full_house.items():
+            if valor == 2 or valor == 3:
+                soma += num*valor
+    return soma
