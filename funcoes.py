@@ -51,3 +51,14 @@ def calcula_pontos_sequencia_baixa(dados):
     if {1, 2, 3, 4}.issubset(valores) or {2, 3, 4, 5}.issubset(valores) or {3, 4, 5, 6}.issubset(valores):
         return 15
     return 0
+def calcula_pontos_sequencia_alta(dados):
+    
+   
+    if (1 in dados and 2 in dados and 3 in dados and 4 in dados and 5 in dados):
+        return 30
+    
+    if (2 in dados and 3 in dados and 4 in dados and 5 in dados and 6 in dados):
+        return 30
+    
+    return 0
+
