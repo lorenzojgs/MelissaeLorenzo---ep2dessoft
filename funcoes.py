@@ -76,3 +76,16 @@ def calcula_pontos_sequencia_alta(dados):
     return 0
 
 # teste
+def calcula_pontos_full_house(dados):
+    valores_unicos = set(dados)
+    
+    if len(valores_unicos) == 2:
+        v1 = list(valores_unicos)[0]
+        contagem = dados.count(v1)
+        
+        if contagem == 2 or contagem == 3:
+            return sum(dados)
+            
+    return 0
+
+print(calcula_pontos_full_house([5, 2, 5, 5, 2]))
