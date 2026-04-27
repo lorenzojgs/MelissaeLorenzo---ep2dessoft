@@ -47,12 +47,25 @@ def calcula_pontos_soma(dados):
 
 
 def calcula_pontos_sequencia_baixa(dados):
-    valores = set(dados)
-    if {1, 2, 3, 4}.issubset(valores) or {2, 3, 4, 5}.issubset(valores) or {3, 4, 5, 6}.issubset(valores):
-        return 15
-    return 0
-def calcula_pontos_sequencia_alta(dados):
+    sequencias = [
+        [1, 2, 3, 4],
+        [2, 3, 4, 5],
+        [3, 4, 5, 6]
+    ]
     
+    for seq in sequencias:
+        encontrou = True
+        for numero in seq:
+            if numero not in dados:
+                encontrou = False
+                break
+        if encontrou:
+            return 15
+    
+    return 0
+
+
+def calcula_pontos_sequencia_alta(dados):
    
     if (1 in dados and 2 in dados and 3 in dados and 4 in dados and 5 in dados):
         return 30
