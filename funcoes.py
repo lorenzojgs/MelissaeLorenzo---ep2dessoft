@@ -76,3 +76,11 @@ def calcula_pontos_sequencia_alta(dados):
     return 0
 
 # teste
+
+def calcula_pontos_full_house(dados):
+    for n in dados:
+        if dados.count(n) == 3:
+            for m in dados:
+                if m != n and dados.count(m) == 2:
+                    return sum(dados)
+    return 0
