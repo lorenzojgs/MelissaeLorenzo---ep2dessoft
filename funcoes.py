@@ -75,3 +75,4 @@ def calcula_pontos_sequencia_alta(dados):
     
     return 0
 
+# teste
