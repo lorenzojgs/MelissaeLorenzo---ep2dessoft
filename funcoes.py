@@ -81,6 +81,6 @@ def calcula_pontos_full_house(dados):
     for n in dados:
         if dados.count(n) == 3:
             for m in dados:
-                if m != n and dados.count(m) == 2:
+                if dados.count(m) == 2 and m != n:
                     return sum(dados)
     return 0
