@@ -99,13 +99,7 @@ def calcula_pontos_full_house(dados_rolados):
     return soma
 
 def calcula_pontos_quadra(dados):
-    valores_com_4 = 0
-
-    for num in dados:
+    for num in set(dados): 
         if dados.count(num) >= 4:
-            valores_com_4 += 1
-
-    if valores_com_4 == 4:  
-        return sum(dados)
-
+            return sum(dados)
     return 0
