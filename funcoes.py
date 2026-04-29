@@ -99,10 +99,6 @@ def calcula_pontos_full_house(dados_rolados):
     return soma
 
 def calcula_pontos_quadra(dados):
-    
-    if len(dados) > 5:
-        dados = dados[-5:]
-
     contagem = {}
     
     for num in dados:
