@@ -98,8 +98,18 @@ def calcula_pontos_full_house(dados_rolados):
                 soma += num*valor
     return soma
 
-def calcula_pontos_quadra(dados):
-    for face in set(dados):
-        if dados.count(face) >= 4:
-            return sum(dados)
+def calcula_pontos_quadra(dados_rolados):
+    for x in dados_rolados:
+        n = 0  
+
+        for n1 in dados_rolados:
+            if n1 == x:
+                n = n + 1
+
+        if n >= 4:
+            soma = 0
+            for y in dados_rolados:
+                soma = soma + y
+            return soma
+
     return 0
