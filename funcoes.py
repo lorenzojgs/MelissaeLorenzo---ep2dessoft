@@ -97,3 +97,10 @@ def calcula_pontos_full_house(dados_rolados):
             if valor == 2 or valor == 3:
                 soma += num*valor
     return soma
+
+
+def calcula_pontos_quadra(lista):
+    for num in lista:
+        if lista.count(num) >= 4:
+            return sum(lista)
+    return 0
