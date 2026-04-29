@@ -107,8 +107,8 @@ def calcula_pontos_quadra(dados):
         else:
             contagem[num] = 1
 
-    for num, qtd in contagem.items():
+    for qtd in contagem.values():
         if qtd >= 4:
-            return num * 4  
+            return sum(dados)
 
     return 0
