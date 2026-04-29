@@ -98,9 +98,8 @@ def calcula_pontos_full_house(dados_rolados):
                 soma += num*valor
     return soma
 
-
-def calcula_pontos_quadra(lista):
-    for num in lista:
-        if lista.count(num) >= 4:
-            return sum(lista)
+def calcula_pontos_quadra(dados):
+    for i in dados:
+        if dados.count(i) >= 4:
+            return sum(dados)
     return 0
