@@ -156,20 +156,21 @@ from funcoes import *
 
 def jogo():
     pontuacao = {
-        'regra_simples': {1:-1, 2:-1, 3:-1, 4:-1, 5:-1, 6:-1},
+        'regra_simples': {1:-1,2:-1,3:-1,4:-1,5:-1,6:-1},
         'regra_avancada': {
-            'cinco_iguais': -1,
-            'full_house': -1,
-            'quadra': -1,
-            'sem_combinacao': -1,
-            'sequencia_alta': -1,
-            'sequencia_baixa': -1
+            'sem_combinacao':-1,
+            'quadra':-1,
+            'full_house':-1,
+            'sequencia_baixa':-1,
+            'sequencia_alta':-1,
+            'cinco_iguais':-1
         }
     }
 
     imprime_cartela(pontuacao)
 
     for _ in range(12):
+
         guardados = []
         rolados = rolar(guardados)
         contador_rerrolagens = 0
@@ -179,7 +180,7 @@ def jogo():
             if mostrar_menu:
                 print("Dados rolados:", rolados)
                 print("Dados guardados:", guardados)
-                print("Digite 1 para guardar, 2 para remover, 3 para rerrolar, 4 para ver cartela ou 0 para pontuar")
+                print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
 
             mostrar_menu = True
             escolha = input()
@@ -216,13 +217,11 @@ def jogo():
                             print("Essa combinação já foi utilizada.")
                         else:
                             break
-
                     elif categoria in pontuacao['regra_avancada']:
                         if pontuacao['regra_avancada'][categoria] != -1:
                             print("Essa combinação já foi utilizada.")
                         else:
                             break
-
                     else:
                         print("Combinação inválida. Tente novamente.")
 
@@ -235,13 +234,12 @@ def jogo():
 
     imprime_cartela(pontuacao)
 
-    soma_final = sum(p for p in pontuacao['regra_simples'].values() if p != -1) + \
-                 sum(p for p in pontuacao['regra_avancada'].values() if p != -1)
+    soma_final = sum(pontos for pontos in pontuacao['regra_simples'].values() if pontos != -1) + \
+                 sum(pontos for pontos in pontuacao['regra_avancada'].values() if pontos != -1)
 
-    if sum(p for p in pontuacao['regra_simples'].values() if p != -1) >= 63:
+    if sum(pontos for pontos in pontuacao['regra_simples'].values() if pontos != -1) >= 63:
         soma_final += 35
 
     print("Pontuação total:", soma_final)
-
 
 jogo()
