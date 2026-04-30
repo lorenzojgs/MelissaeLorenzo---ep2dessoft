@@ -90,5 +90,4 @@ def jogo():
 
     print("Pontuação total:", soma_final)
 
-
-jogo()
+    jogo()
