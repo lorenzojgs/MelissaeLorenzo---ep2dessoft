@@ -152,7 +152,6 @@ def faz_jogada(dados, categoria, cartela_de_pontos):
 
     return cartela_de_pontos
 
-from funcoes import *
 
 def imprime_cartela(cartela):
     print("Cartela de Pontos:")
