@@ -17,7 +17,7 @@ def jogo():
 
     for _ in range(12):
         guardados = []
-        rolados = rolar(guardados)
+        rolados = rolar_dados(5)  # ✅ CORRIGIDO AQUI
         contador_rerrolagens = 0
         mostrar_menu = True
 
@@ -46,7 +46,7 @@ def jogo():
                 if contador_rerrolagens >= 2:
                     print("Você já usou todas as rerrolagens.")
                 else:
-                    rolados = rolar(guardados)
+                    rolados = guardados + rolar_dados(5 - len(guardados))  # ✅ lógica correta
                     contador_rerrolagens += 1
 
             elif escolha == "4":
