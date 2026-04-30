@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+from funcoes import *
+
+
+>>>>>>> 3d65bc1d9795403d24b88459636d740cdf2fc36a
 def jogo():
     pontuacao = {
         'regra_simples': {1:-1, 2:-1, 3:-1, 4:-1, 5:-1, 6:-1},
@@ -87,5 +93,9 @@ def jogo():
 
     print("Pontuação total:", soma_final)
 
+<<<<<<< HEAD
 
 jogo()
+=======
+    jogo()
+>>>>>>> 3d65bc1d9795403d24b88459636d740cdf2fc36a

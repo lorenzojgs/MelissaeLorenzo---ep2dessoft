@@ -172,5 +172,8 @@ def imprime_cartela(cartela):
     print("-"*25)
 =======
     print("-"*25)
+<<<<<<< HEAD
 
 >>>>>>> ea77273394f005a4a310b2899f3ff0907a5ead16
+=======
+>>>>>>> 3d65bc1d9795403d24b88459636d740cdf2fc36a
