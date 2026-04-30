@@ -168,4 +168,9 @@ def imprime_cartela(cartela):
             print(f"| {i}: {filler}| {cartela['regra_avancada'][i]:02} |")
         else:
             print(f"| {i}: {filler}|    |")
+<<<<<<< HEAD
     print("-"*25)
+=======
+    print("-"*25)
+
+>>>>>>> ea77273394f005a4a310b2899f3ff0907a5ead16
