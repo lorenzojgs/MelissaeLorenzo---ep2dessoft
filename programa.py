@@ -88,6 +88,4 @@ def jogo():
         soma_final += 35
 
     print("Pontuacao total:", soma_final)
-
-
 jogo()
